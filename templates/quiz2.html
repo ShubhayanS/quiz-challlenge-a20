@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Maze Craze | Aaruush 20</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="../static/images/logo.jpg"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/animate/animate.css')}}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='vendor/select2/select2.min.css')}}" >
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css')}}" >
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}" >
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="{{ url_for('static', filename = 'images/a20laptop.png') }}" alt="IMG">
+				</div>
+
+				<form class="login100-form validate-form" action="/final" method="POST">
+					<div class="text-center p-t-12" id="upper">
+						<img style="width:70%;"  src="{{ url_for('static', filename = 'images/a20laptop.png') }}" alt="IMG"><br><br>
+						</div>
+					<span class="login100-form-title">
+						Congratulations on reaching Stage 2.
+					</span>
+					
+					<div class="text-justify p-t-12">
+						<p style="color:red;">"Not many reach this final stage as it is a journey taken only by brave ones."</p>
+					    <p><b>Solve the riddle and win!</b></p>
+                        
+                       
+                        
+
+                    </div>
+                    <div class="text-center p-t-12">
+                    
+                    {%if num == 1 %}
+                    <img style ="width:65% !important;" src="{{ url_for('static', filename = 'images/riddles/1.jfif') }}" alt="IMG"><br><br>
+
+                    {%endif%}
+                    {%if num == 2 %}
+                    <img style ="width:65% !important;" src="{{ url_for('static', filename = 'images/riddles/2.jfif') }}" alt="IMG"><br><br>
+
+                    {%endif%}
+                    {%if num == 3 %}
+                    <img style ="width:75% !important;" src="{{ url_for('static', filename = 'images/riddles/3.jfif') }}" alt="IMG"><br><br>
+
+                    {%endif%}
+                    {%if num == 4 %}
+                    <img style ="width:75% !important;" src="{{ url_for('static', filename = 'images/riddles/4.jfif') }}" alt="IMG"><br><br>
+
+                    {%endif%}
+                    {%if num == 5 %}
+                    <img style ="width:75% !important;" src="{{ url_for('static', filename = 'images/riddles/5.jfif') }}" alt="IMG"><br><br>
+
+                    {%endif%}
+                    {%if num == 6 %}
+                    <img style ="width:75% !important;" src="{{ url_for('static', filename = 'images/riddles/6.jpeg') }}" alt="IMG"><br><br>
+
+                    {%endif%}
+                    {%if num == 7 %}
+                    <img style ="width:75% !important;" src="{{ url_for('static', filename = 'images/riddles/7.jfif') }}" alt="IMG"><br><br>
+
+
+                    {%endif%}
+                    {%if num == 8 %}
+                    <img style ="width:75% !important;" src="{{ url_for('static', filename = 'images/riddles/8.jpeg') }}" alt="IMG"><br><br>
+
+
+                    {%endif%}
+                    {%if num == 9 %}
+                    <<img style ="width:85% !important;" src="{{ url_for('static', filename = 'images/riddles/9.jfif') }}" alt="IMG"><br><br>
+
+					{%endif%}
+					{%if num == 10 %}
+                    <<img style ="width:85% !important;" src="{{ url_for('static', filename = 'images/riddles/10.jfif') }}" alt="IMG"><br><br>
+
+                    {%endif%}
+                    </div> 
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						
+						<input class="input100" type="text" name="s2" id="s2" placeholder="Unlock your destiny here">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Submit
+						</button>
+						<br><br>
+
+						<br><br> <p>Made with &#9829; by <a style="color:blue;" href="https://team-envision.github.io/" target="_blank" >Team Envision </a></p><br>
+					</div>
+
+
+
+<!-- 
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="text" name="s2" placeholder="Enter Secret Code ">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Submit
+						</button>
+					</div> -->
+
+
+					<!-- <div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div> -->
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/bootstrap/js/popper.js"></script>
+	<script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="../static/js/main.js"></script>	
+
+</body>
+</html>
