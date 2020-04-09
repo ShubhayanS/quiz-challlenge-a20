@@ -1,7 +1,7 @@
 import requests
 import request
 import random
-from flask import Flask,render_template,redirect, url_for, request
+from flask import Flask,render_template,redirect, url_for, request, session
 app = Flask(__name__)
 
 
@@ -51,14 +51,14 @@ def home():
 
 @app.route('/check',methods=["GET", "POST"])
 def check():
-    global n
+    #global n
     if request.method == "POST":
         myDict2 = request.form  
         s = int(myDict2['s'])
         # return render_template('quiz2.html',s=s)
         if (s==666 or s==456 or s==787 or s==385 or s==65 or s==143 or s== 982 or s==369 or s==211 or s==420):
-            n=random.randint(1,10)
-            return render_template('quiz2.html',num=n,s=s)
+            session['n'] = random.randint(1,10)
+            return render_template('quiz2.html',num=session['n'],s=s)
         else:
             return render_template('wrong2.html')
     # return render_template('wrong.html')
@@ -70,25 +70,36 @@ def about():
     if request.method == "POST":
         myDict = request.form  
         s2 = myDict['s2']
+        n = session['n']
         if (n==1 and s2 =="31"):
+            session.pop('n', None)
             return render_template('yay.html')
         elif(n==2 and s2 == "7"):
+            session.pop('n', None)
             return render_template('yay.html')
         elif((n==3 and s2 == "Y") or (n==3 and s2 == "y")):
+            session.pop('n', None)
             return render_template('yay.html')
         elif(n==4 and s2 == "5"):
+            session.pop('n', None)
             return render_template('yay.html')
         elif((n==5 and s2 == "C") or (n==5 and s2 == "c")):
+            session.pop('n', None)
             return render_template('yay.html')  
         elif(n==6 and s2 == "2"):
+            session.pop('n', None)
             return render_template('yay.html')
         elif(n==7 and s2 == "18"):
+            session.pop('n', None)
             return render_template('yay.html')
         elif(n==8 and s2 == "3"):
+            session.pop('n', None)
             return render_template('yay.html')
         elif(n==9 and s2 == "36"):
+            session.pop('n', None)
             return render_template('yay.html')
         elif(n==10 and s2 == "6"):
+            session.pop('n', None)
             return render_template('yay.html')
         else:
             return render_template('wrong.html')
@@ -100,6 +111,8 @@ def about():
 # @app.errorhandler(500)
 # def not_found(e):
 #     return render_template("wrong2.html")
+
+app.secret_key = "gaius-dev"
 
 if __name__ == '__main__':
     app.run(debug=True)
